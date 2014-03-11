@@ -1,0 +1,275 @@
+/*
+Theme Name: Lighting Portfolio
+Theme URI: http://
+Author: Michael Brown	
+Author URI: http://mfbrowndesign.com
+Description: DESCRIPTION
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: clean, light, responsive, two-column, custom-post-types, custom-fields, portfolio
+Text Domain: wpportfolio
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+body { 
+  background: url("img/Cat-Homepage-Background2.jpg") no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+
+/*Typography------------------------------------------------ */
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+}
+
+p {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 1em;
+	color: white;
+}
+
+.resume p { /* FIGURE OUT WHERE EM IS GETTING ITS DEFAULT SIZE */
+	font-size: 16px;
+}
+
+
+a {
+	font-family: 'Roboto Slab', sans-serif;
+	font-weight: 400;
+	text-decoration: none;
+}
+
+h1 {
+	font-family: 'Roboto Slab', 'Arial Black', serif;
+	color: #00b2e1;
+	font-size: 5em;
+}
+
+h2 {
+	font-family: 'Roboto Slab', 'Arial Black', serif;
+	font-size: 4em;
+	color: #ffffff;
+}
+
+h3 {
+	font-family: 'Roboto Slab', 'Arial Black', serif;
+	font-size: 3em;
+	color: #ffffff;
+	margin: 0.5em 0;
+}
+
+h4, 
+h5,
+h6 {
+	font-family: 'Roboto Slab', 'Arial', sans-serif;
+	font-weight: 400;
+	color: #ffffff;
+	margin: 0.5em 0;
+}
+
+
+footer p {
+	font-size: 0.75em;
+	line-height: 1.2;
+	color: black;
+}
+
+/* GLOBAL STYLES---------------------------------------------- */
+
+.container {
+	width: 100%;
+	position: relative;
+	min-height: 100%;
+}
+
+footer {
+	background-color: white;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+
+/* Homepage styles */
+
+#page-title h1 {
+	margin: 0;
+	margin-top: 5%;
+	text-align: center;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.2);
+}
+
+#page-subtitle h4 {
+	color: #ff8919;
+	margin: 0;
+	font-size: 3em;
+	font-weight: 400;
+	text-align: center;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+}
+
+.homepage-nav {
+	padding-top: 2em;
+	text-align: center;
+}
+
+.homepage-button {
+	display: inline;
+	padding: 0;
+	text-align: center;
+	margin-right: 0.75em;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	-ms-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	}
+
+.homepage-button a {
+	color: white;
+	font-size: 1.2em;
+	padding: 0.4em 0.5em;
+	background-color: rgba(0,141,178,0.5);
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	-ms-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+}
+
+.homepage-button a:hover {
+	background-color: #008db2;
+	-webkit-transition-property: background-color;
+	-moz-transition-property: background-color;
+	-o-transition-property: background-color;
+	-ms-transition-property: background-color;
+	transition-property: background-color;
+}
+
+.homepage-nav div:last-child {
+	margin-right: 0;
+}
+
+.about-me {
+	margin: auto;
+}
+
+.about-me h2 {
+	font-family: 'Roboto Slab', 'Arial Black', serif;
+	padding: 1em 0 1em 0.666667em;
+	color: white;
+	background-color: rgba(0,0,0,0.7);
+	margin-bottom: 0;
+}
+
+.about-me p {
+	padding: 0.5em 1em 1em 1em;
+	margin-top: 0;
+	background-color: rgba(0,0,0,0.5);
+	color: white;
+	line-height: 1.5em;
+}
+
+/* PORTFOLIO STYLES -------------------------------*/
+
+.portfolio-grid {
+	padding-bottom: 1.875em;
+}
+
+.show-thumbnail {
+	background-color: white;
+	width: 100%;
+	height: 200px;
+	position: relative;
+}
+
+.show-thumbnail img {
+	position: absolute;
+}
+
+.show-caption {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: rgba(0,0,0,0.4);
+	color: white;
+}
+
+.show-caption p {
+	margin: 0.5em 0 0.5em 0.25em;
+}
+
+/* RESUME STYLES ----------------------------------*/
+
+.show-title {
+	text-align: left;
+	font-style: italic;
+	padding-left: 0;
+}
+
+.theatre-director {
+
+}
+
+.show-date {
+	text-align: right;
+}
+
+
+
+/* MEDIA QUERIES ----------------------------------*/
+
+/* MEDIUM SCREEN ----------------------------------*/
+@media only screen and (min-width: 40.063em){
+	#frontpage-info	{
+		margin-left: 5%;
+	}
+
+	.homepage-nav {
+		text-align: left;
+		margin-left: 5%;
+	}
+	
+	.homepage-button a {
+		padding: 0.4em 0.75em;
+	}
+	
+	.about-me {
+	margin-left: 5%;
+	width: 40%;
+	}
+	
+	.right-footer {
+	text-align: right;
+	}
+
+	#page-title h1 {
+	text-shadow: 2px 2px 1px rgba(255,255,255,0.3); 
+	text-align: left;
+	}
+
+	#page-subtitle h4 {
+	text-align: left;
+	}
+}
+
+/* LARGE SCREEN ------------------------------------*/
+
+@media only screen and (min-width: 64.063em) { 
+.top-bar {
+  height: 45px;
+  line-height: 45px;
+}
+
+

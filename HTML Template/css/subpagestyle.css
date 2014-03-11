@@ -1,0 +1,40 @@
+/* SUBPAGES. FOR OVERRIDING ANY GLOBAL STYLES */
+
+/*TYPOGRAPHY----------------------------------*/
+
+#page-title h1 {
+	margin-top: 0.5em;
+}
+
+/* Remove HTML Background photo */
+
+html {
+	background: none;
+}
+
+/* Apply new textured background to sub pages */
+
+body {
+	background: url('../img/chalkboard.jpg') center center;
+	overflow: visible;
+}
+
+/*Adjust position and padding of page title */
+
+#page-title {
+	padding: 0;
+	padding-bottom: 1em;
+	margin: 0;
+}
+
+
+
+
+
+
+@media only screen and (min-width: 40.063em){
+
+	#page-title {
+		padding-left: 0;
+	}
+}
