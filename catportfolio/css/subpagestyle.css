@@ -10,6 +10,7 @@
 
 html {
 	background: none;
+	overflow: visible;
 }
 
 /* Apply new textured background to sub pages */

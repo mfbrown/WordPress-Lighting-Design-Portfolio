@@ -1,17 +1,28 @@
 <?php get_header(); ?>
 
-	<p>This is the front-page.php</p>
-
 	<?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
 		<div id="frontpage-info">
-          <div id="page-title">
-            <h1><?php bloginfo('name'); ?></h1>
-          </div>
-          <div id="page-subtitle">
-            <h4><?php bloginfo('description'); ?></h4>
-          </div>
-        </div>
+	      <div class="page-title responsive-title">
+	        <h1><?php bloginfo('name'); ?></h1>
+	      </div>
+	      <div class="page-subtitle responsive-subtitle">
+	        <h4><?php bloginfo('description'); ?></h4>
+	      </div>
+	    </div>
+	      <div class="homepage-nav">
+	      	<?php // WP NAV Block
+				$args = array(
+					'menu' => 'front-page-menu',
+					'echo' => false
+					);
+				echo strip_tags(wp_nav_menu( $args ), '<a>');
+			?>
+	      </div>
+	    <div class="about-me">
+	    	<?php the_content(); ?>
+	    </div>
+        
 
 	<?php endwhile; else: ?>
 
@@ -19,4 +30,4 @@
 	
 	<?php endif; ?>
 
-<?php get_footer(); ?>
+<?php include('footer2.php'); ?>
