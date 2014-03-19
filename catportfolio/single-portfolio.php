@@ -6,9 +6,15 @@
 
 	<?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
-		<h3><?php the_title(); ?></h3>
+		<div class="row subpage-indent">
+			<div class="responsive-subtitle">
+				<h2><?php the_title(); ?></h2>
+			</div>
+			<p><?php the_field( 'show_details'); ?><p>
+			<hr>
+		</div>
 		<?php the_field( 'show_pictures' ); ?>
-		<hr>
+		
 
 	<?php endwhile; else: ?>
 

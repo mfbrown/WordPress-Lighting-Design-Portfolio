@@ -35,7 +35,7 @@ body {
 p {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
-	font-size: 1em;
+	font-size: 0.8em;
 	color: white;
 }
 
@@ -77,6 +77,10 @@ h3 {
 	margin: 0.5em 0;
 }
 
+h4 {
+	font-size: 2em;
+}
+
 h4, 
 h5,
 h6 {
@@ -92,6 +96,21 @@ footer p {
 	line-height: 1.2;
 	color: black;
 }
+
+	/* RESUME SPECIFIC FONT RULES --------- */
+
+	.resume-page h4 {
+		margin-bottom: 0.25em;
+	}
+
+	.resume-page {
+		color: white;
+	}
+
+	.resume-page p {
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+	}
 
 /* GLOBAL STYLES---------------------------------------------- */
 
@@ -112,8 +131,13 @@ footer {
 	width: 100%;
 }
 
+.subpage-indent {
+	padding-left: 15px;
+	padding-right: 15px;
+}
 
-/* Homepage styles */
+
+/* Homepage styles ----------------------------------*/
 
 .page-title,
 .page-subtitle {
@@ -253,12 +277,17 @@ footer {
 	text-align: right;
 }
 
-
+.resume-rows {
+}
 
 /* MEDIA QUERIES ----------------------------------*/
 
 /* MEDIUM SCREEN ----------------------------------*/
 @media only screen and (min-width: 40.063em){
+	p {
+		font-size: 1em;
+	}
+
 	#frontpage-info	{
 		margin-left: 5%;
 	}

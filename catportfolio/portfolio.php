@@ -6,13 +6,13 @@
 
 	*/
 
-
 ?>
 
 	
 	<div class="row">
-		<h1><?php echo $post->post_title; ?></h1>
-
+		<div class="responsive-title">
+			<h1 class="subpage-indent"><?php echo $post->post_title; ?></h1>
+		</div>
 	<?php // a variation on the WP loop that looks for a custom post type instead. 
 
 		$args = array(		//array accepted by WP_Query function
