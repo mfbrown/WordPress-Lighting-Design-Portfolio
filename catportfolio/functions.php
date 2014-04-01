@@ -9,16 +9,10 @@ function theme_styles(){
 	wp_enqueue_style( 'foundation', get_template_directory_uri() . '/css/foundation.css' );
 	wp_enqueue_style( 'main', get_template_directory_uri() . '/style.css' );
 	
-
 	wp_register_style( 'subpagestyle', get_template_directory_uri() . '/css/subpagestyle.css' );
 	if(!is_page('home')){
 		wp_enqueue_style( 'subpagestyle' );
 	}
-
-
-
-	
-
 }
 //LOAD THEME JS
 //REPLACE JS FILES WITH YOUR THEME SPECIFIC JS FILES
@@ -30,19 +24,17 @@ function my_jquery_enqueue() {
    wp_enqueue_script('jquery');
 }
 
-
 function theme_js() {
 	wp_enqueue_script( 'fittext', get_template_directory_uri() . '/js/jquery.fittext.js', array('jquery'), '', true );
 	wp_enqueue_script('theme_js', get_template_directory_uri() . '/js/theme.js', array('jquery'), '', true );
+	wp_enqueue_script('foundation_js', get_template_directory_uri() . '/js/foundation.min.js', array('jquery'), '', true );
 }
-
 
 add_action('wp_enqueue_scripts', 'theme_js');
 
 add_action('wp_enqueue_scripts', 'theme_styles');
 
 add_filter( 'use_default_gallery_style', '__return_false' );
-
 
 	//enable custom menus
 add_theme_support( 'menus' );

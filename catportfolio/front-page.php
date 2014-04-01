@@ -16,14 +16,12 @@
 					'menu' => 'front-page-menu',
 					'echo' => false
 					);
-				echo strip_tags(wp_nav_menu( $args ), '<a>');
-			?>
+				echo strip_tags(wp_nav_menu( $args ), '<a>'); ?>
 	      </div>
 	    <div class="about-me">
 	    	<?php the_content(); ?>
 	    </div>
-        
-
+	    
 	<?php endwhile; else: ?>
 
 		<p>There are no posts or pages here.</p>

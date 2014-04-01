@@ -9,8 +9,15 @@
 		<div class="row subpage-indent">
 			<div class="responsive-subtitle">
 				<h2><?php the_title(); ?></h2>
+				<h4><?php the_field('show_theatre'); ?></h4>
 			</div>
-			<p><?php the_field( 'show_details'); ?><p>
+			<div class="small-12 medium-6 columns show-details">
+				
+				<p>Director: <?php the_field('show_director'); ?></p>
+			</div>
+			<div class="small-12 medium-6 columns">
+				<p>""</p>
+			</div>
 			<hr>
 		</div>
 		<?php the_field( 'show_pictures' ); ?>

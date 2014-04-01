@@ -97,6 +97,11 @@ footer p {
 	color: black;
 }
 
+hr {
+	display: block;
+	clear: both;
+}
+
 	/* RESUME SPECIFIC FONT RULES --------- */
 
 	.resume-page h4 {
@@ -110,6 +115,17 @@ footer p {
 	.resume-page p {
 		margin-top: 0.5em;
 		margin-bottom: 0.5em;
+	}
+
+	.show-title {
+		font-style: italic;
+	}
+
+	/* PORTFOLIO SPECIFIC FONT RULES ----------- */
+
+	.show-caption p {
+		font-style: italic;
+		margin: 0.5em 0 0.5em 0.25em;
 	}
 
 /* GLOBAL STYLES---------------------------------------------- */
@@ -236,8 +252,8 @@ footer {
 	color: white;
 }
 
-.show-caption p {
-	margin: 0.5em 0 0.5em 0.25em;
+.show-details {
+	padding-left: 0;
 }
 
 	/* GALLERY STYLES -------*/
@@ -262,12 +278,6 @@ footer {
                     
 
 /* RESUME STYLES ----------------------------------*/
-
-.show-title {
-	text-align: left;
-	font-style: italic;
-	padding-left: 0;
-}
 
 .theatre-director {
 
