@@ -27,10 +27,10 @@
         <div class="small-12 medium-6 columns portfolio-grid">
           <a href="<?php the_permalink(); ?>">
           	<div class="show-thumbnail">
-	          	<img src="<?php the_field('thumbnail_for_portfolio'); ?>">
-	            <div class="show-caption">
-	              <p><?php the_field('show_title'); ?></p>
-            	</div>
+	          	<img width="600" height="600" src="<?php the_field('thumbnail_for_portfolio'); ?>">
+	            <div>
+	            	<p><?php the_field('show_title'); ?></p>
+	            </div>
           </div></a>
         </div>
     
