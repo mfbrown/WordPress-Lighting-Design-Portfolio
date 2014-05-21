@@ -173,6 +173,11 @@ input[type="submit"] {
 		padding: 0;
 	}
 
+	#image-header h1 {
+		margin: 0;
+		padding-top: 50px;
+	}
+
 	/* PORTFOLIO SPECIFIC FONT RULES ----------- */
 
 	.portfolio-title h1 {
@@ -199,6 +204,12 @@ input[type="submit"] {
 	.portfolio-bottom p {
 		margin: 0.5em;
 		font-size: 0.75em;
+	}
+
+	/* CONTACT FONT RULES ----------------------- */
+
+	.contact-info a:hover {
+		color: lightgrey;
 	}
 
 	/* NAV FONT RULES --------------------------- */
@@ -242,6 +253,21 @@ body {
 	padding-left: 15px;
 	padding-right: 15px;
 }
+
+#picture-header {
+	position: relative;
+}
+
+#image-header {
+	width: 100%;
+	height: 200px;
+}
+
+#picture-header h1 {
+	position: absolute;
+}
+
+
 
 /* NAVBAR STYLES -----------------*/
 
@@ -350,7 +376,7 @@ footer div {
 	-o-transition-duration: 0.5s;
 	-ms-transition-duration: 0.5s;
 	transition-duration: 0.5s;
-	}
+}
 
 .homepage-nav a:last-child {
 	margin-right: 0;
@@ -360,6 +386,7 @@ footer div {
 	margin: auto;
 	background-color: rgba(0,0,0,0.5);
 	width: 90%;
+	text-align: center;
 }
 
 .about-me h2 {
@@ -481,6 +508,7 @@ footer div {
 
 /* CONTACT FORM STYLES ----------------------------*/
 
+
 .fscf-input-text {
 	background-color: #e4e4e4;
 	border: none;
@@ -492,6 +520,7 @@ footer div {
 
 .fscf-input-textarea {
 	height: 200px;
+	background-color: #e4e4e4;
 }
 
 input.fscf-input-captcha {
@@ -525,7 +554,7 @@ label {
 
 /* MEDIA QUERIES ----------------------------------*/
 
-/* MEDIUM SCREEN ----------------------------------*/
+/* MEDIUM SCREEN AND UP----------------------------------*/
 @media only screen and (min-width: 40.063em){
 	
 	/*Typography Changes */
@@ -602,6 +631,7 @@ label {
 	.about-me {
 	margin-left: 5%;
 	width: 40%;
+	text-align: left;
 	}
 	
 	.right-footer {
@@ -645,6 +675,10 @@ label {
 	.rwd-break {
 		display: none;
 		margin-top: 20px;
+	}
+
+	#image-header {
+		height: 300px;
 	}
 }
 
@@ -719,13 +753,6 @@ label {
     right: 9999px; 
   }
   
-  .fa-angle-right {
-  	transform-origin: 70% 50%;
-  	transform: rotate(90deg);
-    -webkit-transform-origin: 70% 50%;
-    -webkit-transform: rotate(90deg);
-  }
-
   input[type="submit"]:hover {
   	background-color: #008db2;
 	-webkit-transition-property: background-color;
@@ -743,6 +770,10 @@ label {
 	-ms-transition-property: text-decoration;
 	transition-property: text-decoration;
   }
+
+  	#image-header {
+		height: 400px;
+	}
 
  }
 

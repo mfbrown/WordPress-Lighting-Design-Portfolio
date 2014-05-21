@@ -7,11 +7,27 @@
 	*/
 ?>
 	
-<div class="row resume-page subpage-indent">
-	<div class="responsive-title">
-		<h1><?php echo $post->post_title; ?></h1>
-	</div>
+<div class="row resume-page">
+
+
+	<?php 
+		$image_id = 155;
+		$size = full;
+
+		$image_attributes = wp_get_attachment_image_src( $image_id, full, false ); 
+		$resume_header = $image_attributes[0];
+		$image_meta = wp_prepare_attachment_for_js( $image_id ); 
+		$header_caption = $image_meta[8];
+		?> 
+
+
+		<div class="responsive-title" id="image-header" style="background: url('<?php echo $resume_header; ?>') no-repeat center center; -webkit-background-size: cover; background-size: cover;">
+			<h1 class="subpage-indent"><?php echo $post->post_title; ?></h1>
+			<p style="color: white;"><?php echo $image_meta[8]; ?>12</p>
+		</div>
+
 </div>
+
 
 <?php // a variation on the WP loop that looks for a custom post type instead. 
 
@@ -21,6 +37,7 @@ $args = array(		//array accepted by WP_Query function
 	'orderby' => 'meta_value_num',
 	'order' => 'DESC' //custom post type - CHANGE TO CUSTOM POST TYPE OF CURRENT PROJECT
 );
+
 
 $the_query = new WP_Query( $args ); //WP_Query accepts an array called $args
 ?>
@@ -99,11 +116,7 @@ $the_query = new WP_Query( $args ); //WP_Query accepts an array called $args
 	<div class="resume-download row subpage-indent">
 		<?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
 			<?php the_content(); ?>
-		<?php endwhile; else: ?>
-
-			<p>There are no posts or pages here.</p>
-
-		<?php endif; ?>
+		<?php endwhile; endif; ?>
 	</div>
 
 

@@ -17,7 +17,7 @@
 			</div>
 
 			<div class="row">
-				<div class="small-12 medium-6 columns">
+				<div class="small-12 medium-6 columns contact-info">
 					<?php the_field("contact_info"); ?>
 				</div>
 				<div class="small-12 medium-6 columns">
